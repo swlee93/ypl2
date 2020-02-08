@@ -1,0 +1,31 @@
+{
+  "name": "hackathon-gql-server",
+  "version": "1.0.0",
+  "description": "Hackathon API with Graphql",
+  "main": "index.js",
+  "repository": "https://github.com/swlee93/hackathon-gql-server",
+  "author": "Lee Sang Woo<weourusours0to1@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.9.14",
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "graphql-to-json": "^1.1.2",
+    "graphql-yoga": "^1.14.8",
+    "nodemon": "^2.0.2",
+    "typescript": "^3.7.4"
+  },
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "dev": "nodemon --exec babel-node src/index.js"
+  },
+  "now": {
+    "alias": "movieql"
+  },
+  "devDependencies": {
+    "babel-plugin-wildcard": "^5.0.0"
+  }
+}
