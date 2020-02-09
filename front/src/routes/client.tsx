@@ -10,10 +10,10 @@
 // });
 
 // export default client;
-import ApolloClient from "apollo-boost";
+import ApolloClient from 'apollo-boost'
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/"
-});
+	uri: 'http://localhost:4000/',
+})
 
-export default client;
+export default client

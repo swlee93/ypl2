@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext, Fragment } from "react";
 
-import { HOME_PAGE } from "../../queries";
+import { HOME_PAGE } from "../../api/queries";
 
 import { useQuery } from "react-apollo-hooks";
 
