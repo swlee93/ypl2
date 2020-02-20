@@ -4,7 +4,7 @@ import useInitializer from './hooks/useInitializer'
 
 const App = () => {
 	const [initProps] = useInitializer()
-
+  
 	return <Routes {...initProps} />
 }
 
