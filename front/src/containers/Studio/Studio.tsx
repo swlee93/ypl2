@@ -5,6 +5,8 @@ import 'codemirror/lib/codemirror.css'
 import 'tui-editor/dist/tui-editor.min.css'
 import 'tui-editor/dist/tui-editor-contents.min.css'
 import { Editor } from '@toast-ui/react-editor'
+import TUIEditor from 'tui-editor'
+
 import Icon from '../../components/Icon'
 import { NEWS } from '../../api/queries'
 
@@ -14,6 +16,25 @@ enum MODE {
 	EDIT,
 	VIEW,
 }
+
+function renderNews(wrapperId, url) {
+	var el = document.querySelector('#' + wrapperId)
+	el.innerHTML = `<div><a href="${url}">test: "${url}" </a></div>`
+}
+
+TUIEditor.defineExtension('news', () => {
+	TUIEditor.codeBlockManager.setReplacer('news', function(youtubeId) {
+		var wrapperId =
+			'news' +
+			Math.random()
+				.toString(36)
+				.substr(2, 10)
+		setTimeout(renderNews.bind(null, wrapperId, youtubeId), 0)
+
+		return '<div id="' + wrapperId + '"></div>'
+	})
+})
+
 
 const useEditor = ({ ref }, updater = []) =>
 	useMemo(() => {
@@ -26,7 +47,7 @@ const useEditor = ({ ref }, updater = []) =>
 				width='100%'
 				initialEditType='markdown'
 				useCommandShortcut={true}
-				exts={['chart', 'scrollSync', 'colorSyntax', 'uml', 'mark', 'table']}
+				exts={['chart', 'scrollSync', 'colorSyntax', 'uml', 'mark', 'table', 'news']}
 				usageStatistics={false}
 			/>
 		)
