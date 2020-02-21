@@ -33,12 +33,12 @@ const Home = () => {
         <Card />
         <Card />
       </Rolling> */}
-			<KakaoMap options={{ lng, lat, zoom: 'BOTTOMRIGHT', mapType: 'TOPLEFT' }}>
+			{/* <KakaoMap options={{ lng, lat, zoom: 'BOTTOMRIGHT', mapType: 'TOPLEFT' }}>
 				<Fragment>
 					<Markers data={[location]} name={MarkerType.user} />
 					{data && data.devices && <Markers data={data.devices} name={MarkerType.device} />}
 				</Fragment>
-			</KakaoMap>
+			</KakaoMap> */}
 		</Container>
 	)
 }

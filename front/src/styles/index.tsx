@@ -9,3 +9,7 @@ export const Container = styled.div`
 	flex-wrap: wrap;
 	justify-items: center;
 `
+
+export const Options = styled.div``
+
+export const Contents = styled.div``
